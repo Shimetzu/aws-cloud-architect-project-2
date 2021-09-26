@@ -2,18 +2,15 @@
 My Estimate;US East (N. Virginia);;Amazon EC2;0; $1.327,66 ;Operating system (Linux), Storage amount (1500 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 4), Advance EC2 instance (t4g.xlarge), Pricing strategy (EC2 Instance Savings Plans 1 Year  None upfront), Snapshot Frequency (6x Daily), Amount changed per snapshot (10 GB)
 My Estimate;US East (N. Virginia);;Amazon EC2;0; $1.131,99 ;Operating system (Linux), Storage amount (750 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 4), Advance EC2 instance (c6g.2xlarge), Pricing strategy (EC2 Instance Savings Plans 1 Year  None upfront), Snapshot Frequency (6x Daily), Amount changed per snapshot (10 GB)
 My Estimate;US East (N. Virginia);;Amazon RDS for MySQL;0; $2.838,64 ;Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (2000 GB), Quantity (4), Instance type (db.m5.large), Deployment option (Multi-AZ), Pricing strategy (OnDemand)
-My Estimate;US East (N. Virginia);;Application Load Balancer;0; $250,03 ;Number of Application Load Balancers (1)
+My Estimate;US East (N. Virginia);;Network Load Balancer;0; $47,09 ;Number of Network Load Balancers (1), Processed bytes per NLB for TCP (5 GB per hour), Average number of new TCP connections (1000 per second), Average TCP connection duration (3 seconds), Processed bytes per NLB for UDP (2 GB per hour), Average number of new UDP Flows (500 per second), Average UDP Flow duration (10 seconds)
 My Estimate;US East (N. Virginia);;Network Load Balancer;0; $47,09 ;Number of Network Load Balancers (1), Processed bytes per NLB for TCP (5 GB per hour), Average number of new TCP connections (1000 per second), Average TCP connection duration (3 seconds), Processed bytes per NLB for UDP (2 GB per hour), Average number of new UDP Flows (500 per second), Average UDP Flow duration (10 seconds)
 My Estimate;US East (N. Virginia);;S3 Standard;0; $128,55 ;S3 Standard storage (5000 GB per month)
 My Estimate;US East (N. Virginia);;Data Transfer;0; $-   ;
 My Estimate;US East (N. Virginia);;Amazon Virtual Private Cloud (VPC);0; $292,00 ;Working days per month (22), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Number of Site-to-Site VPN Connections (8)
 My Estimate;US East (N. Virginia);;Amazon Route 53*;0; $402,70 ;Hosted Zones (2)
+My Estimate;US East (N. Virginia);;Amazon Elastic IP;0; $262,80 ;Number of EC2 instances (8), Number of EIPs per instance (10)
 ;;;;;;
-Monthly Total:; $6.418,65 ;;;;;
-;;;;;;
-Acknowledgement;;;;;;
-;;;;;;
-* I didn't find CloudFront at the estimate, so I've used Route 53 because in most cases they go together;;;;;;
+Monthly Total:; $6.478,52 ;;;;;
 ;;;;;;
 I've reduced the amout of storage of the instances because it was dimensionated in case of a big peak of requests arrive, I prefere to have less space (and maybe use another S3 if it's necessary in the future) rather than;;;;;;
-reduce the cpu/ram of the instances. So with that change alone the budget is archived.;;;;;;
+reduce the cpu/ram of the instances. Also I've reduced the amount of elastic ip's from 12 to 10 per instance. So with that change alone the budget is archived.;;;;;;
